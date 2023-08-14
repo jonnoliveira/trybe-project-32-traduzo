@@ -31,9 +31,9 @@
             <select name="translate-from">
               {% for language in languages %}
                 {% if language["acronym"] ==  translate_from  %}
-                  <option value="{{ language }}" selected>{{ language["name"] }}</option>
+                  <option value="{{ language['acronym'] }}" selected>{{ language["name"] }}</option>
                 {% endif %}
-                <option value="{{ language }}">{{ language["name"]|upper }}</option>
+                <option value="{{ language['acronym'] }}">{{ language["name"]|upper }}</option>
               {% endfor %}
             </select>
 
@@ -46,9 +46,9 @@
             <select name="translate-to">
               {% for language in languages %}
                 {% if language["acronym"] ==  translate_to  %}
-                  <option value="{{ language }}" selected>{{ language["name"] }}</option>
+                  <option value="{{ language['acronym'] }}" selected>{{ language["name"] }}</option>
                 {% endif %}
-                <option value="{{ language }}">{{ language["name"]|upper }}</option>
+                <option value="{{ language['acronym'] }}">{{ language["name"]|upper }}</option>
               {% endfor %}
             </select>
 
